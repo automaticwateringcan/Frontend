@@ -1,49 +1,161 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
+import React from 'react';
+import { Button, View, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { createStackNavigator, createAppContainer } from 'react-navigation'; // Version can be specified in package.json
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
-type Props = {};
-export default class App extends Component<Props> {
+class FirstScreen extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+    <TouchableOpacity style={{backgroundColor: "red", padding: 20}} onPress={() => this.props.navigation.navigate('Login')}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }  }>
+        <Text  style={{fontSize:22}}>we take care of them</Text>
+        <Text>touch anywhere</Text>
+
+      </View>
+      </TouchableOpacity>
+    );
+  }
+}
+
+class LoginScreen extends React.Component {
+  render() {
+    return (
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text>LOGIN</Text>
+        <Button
+          title="log in"
+          onPress={() => this.props.navigation.navigate('Main')}
+        />
+        <Button
+          title="register"
+          onPress={() => this.props.navigation.navigate('Register')}
+        />
+
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+class RegisterScreen extends React.Component {
+  render() {
+    return (
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text>REGISTER</Text>
+        <Button
+          title="register"
+          onPress={() => this.props.navigation.navigate('Main')}
+        />
+
+      </View>
+    );
+  }
+}
+
+class MainScreen extends React.Component {
+  render() {
+    return (
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text>MAIN</Text>
+        <Button
+          title="Add"
+          onPress={() => this.props.navigation.navigate('AddPlant')}
+        />
+         <Button
+          title="edit"
+          onPress={() => this.props.navigation.navigate('EditPlant')}
+        />
+
+
+         <ScrollView>
+                  <Text style={{fontSize:200}}>Scroll me plz</Text>
+                  <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
+                  <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
+                  <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
+                  <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
+                  <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
+                  <Text style={{fontSize:200}}>SCROLL</Text>
+                  <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
+                  <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
+                  <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
+                  <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
+                  <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
+                  <Text style={{fontSize:200}}>Scrolling down</Text>
+                  <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
+                  <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
+                  <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
+                  <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
+                  <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
+                  <Text style={{fontSize:200}}>SCROLL</Text>
+                  <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
+                  <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
+                  <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
+                  <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
+                  <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
+                </ScrollView>
+
+
+      </View>
+    );
+  }
+}
+
+class AddPlantScreen extends React.Component {
+  render() {
+    return (
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text>ADD PLANT</Text>
+        <Button
+          title="back"
+          onPress={() => this.props.navigation.goBack()}
+        />
+
+      </View>
+    );
+  }
+}
+
+
+class EditPlantScreen extends React.Component {
+  render() {
+    return (
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text>EDIT PLANT</Text>
+        <Button
+          title="back"
+          onPress={() => this.props.navigation.goBack()}
+        />
+
+      </View>
+    );
+  }
+}
+
+
+
+
+
+
+
+
+const RootStack = createStackNavigator(
+  {
+    FirstScreen: FirstScreen,
+    AddPlant: AddPlantScreen,
+    EditPlant: EditPlantScreen,
+    Login: LoginScreen,
+    Register: RegisterScreen,
+    Main: MainScreen
+
+
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+  {
+    initialRouteName: 'FirstScreen',
+  }
+);
+
+const AppContainer = createAppContainer(RootStack);
+
+export default class App extends React.Component {
+  render() {
+    return <AppContainer />;
+  }
+}
