@@ -7,6 +7,7 @@ import RegisterScreen from './src/components/RegisterScreen'
 import MainScreen from './src/components/MainScreen'
 import AddPlantScreen from './src/components/AddPlantScreen'
 import EditPlantScreen from './src/components/EditPlantScreen'
+import OnboardingScreen from './src/components/OnboardingScreen'
 
 const RootStack = createStackNavigator(
   {
@@ -15,7 +16,8 @@ const RootStack = createStackNavigator(
     EditPlant: EditPlantScreen,
     Login: LoginScreen,
     Register: RegisterScreen,
-    Main: MainScreen
+    Main: MainScreen,
+    Onboarding: OnboardingScreen
   },
   {
     initialRouteName: 'FirstScreen',

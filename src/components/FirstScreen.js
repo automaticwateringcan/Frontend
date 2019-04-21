@@ -7,9 +7,8 @@ const styles = StyleSheet.create({
     },
     text: {
 fontFamily: 'Poppins-ExtraLight',
-fontWeight: '200',
 fontSize: 20,
-color: 'rgba(83,113,75,1)',
+color: 'rgba(83,113,75,1)'
     }
 });
 
@@ -20,7 +19,7 @@ class FirstScreen extends React.Component {
     render() {
         return (
 
-            <TouchableNativeFeedback onPress={() => this.props.navigation.navigate('Login')}>
+            <TouchableNativeFeedback onPress={() => this.props.navigation.navigate('Onboarding')}>
                 <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                     <Image style={styles.image}
                         source={require('../../resources/logo_text_A0_Rectangle_2_pattern.png')}
