@@ -1,5 +1,6 @@
-import {Button, Image, ScrollView, Text, TouchableOpacity, View} from "react-native";
+import {Button, Image, ScrollView, Text, TouchableOpacity, View, FlatList} from "react-native";
 import React from 'react';
+import FlowerItem from "./FlowerItem";
 
 class MainScreen extends React.Component {
     static navigationOptions = () => ({
@@ -33,32 +34,16 @@ class MainScreen extends React.Component {
     render() {
         return (
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <ScrollView>
-                    <Text style={{fontSize:200}}>Scroll me plz</Text>
-                    <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
-                    <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
-                    <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
-                    <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
-                    <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
-                    <Text style={{fontSize:200}}>SCROLL</Text>
-                    <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
-                    <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
-                    <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
-                    <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
-                    <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
-                    <Text style={{fontSize:200}}>Scrolling down</Text>
-                    <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
-                    <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
-                    <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
-                    <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
-                    <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
-                    <Text style={{fontSize:200}}>SCROLL</Text>
-                    <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
-                    <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
-                    <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
-                    <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
-                    <Image source={{uri: "https://facebook.github.io/react-native/img/favicon.png", width: 64, height: 64}} />
-                </ScrollView>
+                <FlatList
+                    style={{width: '100%'}}
+                    data={[
+                        {key: 'Devin'},
+                        {key: 'Jackson'},
+                        {key: 'James'},
+                        {key: 'Joel'}
+                    ]}
+                    renderItem={() => <FlowerItem navigation={this.props.navigation}/>}
+                />
 
 
             </View>

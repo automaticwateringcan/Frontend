@@ -17,7 +17,7 @@ const RootStack = createStackNavigator(
     Login: LoginScreen,
     Register: RegisterScreen,
     Main: MainScreen,
-    Onboarding: OnboardingScreen
+    Onboarding: OnboardingScreen,
   },
   {
     initialRouteName: 'Main',

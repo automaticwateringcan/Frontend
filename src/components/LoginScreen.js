@@ -129,8 +129,8 @@ class LoginScreen extends React.Component {
                 </TouchableOpacity>
 
                 <View style={{flexDirection: 'row'}}>
-                <Text style={styles.textDoNotHave}>Do not have an account? </Text>
-                <Text style={styles.textRegister} onPress={() => this.props.navigation.navigate('Register')}>REGISTER</Text>
+                    <Text style={styles.textDoNotHave}>Do not have an account? </Text>
+                    <Text style={styles.textRegister} onPress={() => this.props.navigation.navigate('Register')}>REGISTER</Text>
                 </View>
 
             </View>
