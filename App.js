@@ -20,7 +20,7 @@ const RootStack = createStackNavigator(
     Onboarding: OnboardingScreen
   },
   {
-    initialRouteName: 'FirstScreen',
+    initialRouteName: 'Main',
   }
 );
 
