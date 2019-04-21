@@ -24,7 +24,9 @@ const styles = StyleSheet.create({
         letterSpacing: 10,
         fontFamily: 'Poppins-Bold',
         fontSize: 14,
-        color: 'rgba(83, 113, 75, 1)'
+        color: 'rgba(83, 113, 75, 1)',
+        width: 290
+
     },
     inputLogin:{
         height: 40,
@@ -35,7 +37,10 @@ const styles = StyleSheet.create({
         color: 'rgba(184, 182, 182, 1)',
         paddingTop: 0,
         paddingBottom: 0,
-        marginBottom: 25
+        marginBottom: 25,
+        width: 290
+
+
     },
     inputPassword:{
         height: 40,
