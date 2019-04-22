@@ -16,12 +16,24 @@ const styles = StyleSheet.create({
 });
 
 class FirstScreen extends React.Component {
-    static navigationOptions = () => ({
+    static navigationOptions = ({navigation}) => ({
         title: 'ZBYSZEK',
         headerTitleStyle: {fontFamily: 'Poppins-Bold', fontSize: 20, color: 'rgba(255, 255, 255, 1)'},
         headerStyle: {
             backgroundColor: 'rgba(83, 113, 75, 1)'
-        }
+        },
+        headerRight: (
+            <TouchableOpacity
+                style={{
+                    alignItems:'center',
+                    justifyContent:'center',
+                    marginRight: 10
+                }}
+                onPress={() => navigation.navigate('EditPlant')}
+            >
+                <Text style={{fontFamily: 'Poppins-SemiBold', color: 'rgba(255, 255, 255, 1)'}}>EDIT</Text>
+            </TouchableOpacity>
+        )
     });
 
 
