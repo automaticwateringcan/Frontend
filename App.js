@@ -8,6 +8,7 @@ import MainScreen from './src/components/MainScreen'
 import AddPlantScreen from './src/components/AddPlantScreen'
 import EditPlantScreen from './src/components/EditPlantScreen'
 import OnboardingScreen from './src/components/OnboardingScreen'
+import FlowerScreen from "./src/components/FlowerScreen";
 
 const RootStack = createStackNavigator(
   {
@@ -18,9 +19,10 @@ const RootStack = createStackNavigator(
     Register: RegisterScreen,
     Main: MainScreen,
     Onboarding: OnboardingScreen,
+      Flower: FlowerScreen,
   },
   {
-    initialRouteName: 'Main',
+    initialRouteName: 'FirstScreen',
   }
 );
 

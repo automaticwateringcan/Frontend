@@ -3,7 +3,7 @@ import React from 'react';
 import FlowerItem from "./FlowerItem";
 
 class MainScreen extends React.Component {
-    static navigationOptions = () => ({
+    static navigationOptions = ({navigation}) => ({
         title: 'MY FLOWERS',
         headerTitleStyle: {
             fontFamily: 'Poppins-Bold',
@@ -24,7 +24,7 @@ class MainScreen extends React.Component {
                     borderRadius:5,
                     marginRight: 10
                 }}
-                onPress={() => this.props.navigation.navigate('AddPlant')}
+                onPress={() => navigation.navigate('AddPlant')}
             >
                 <Text style={{fontFamily: 'Poppins-SemiBold', color: 'rgba(255, 255, 255, 1)'}}>New flower</Text>
             </TouchableOpacity>

@@ -35,7 +35,7 @@ class FirstScreen extends React.Component {
 
     render() {
         return (
-            <TouchableNativeFeedback onPress={() => this.props.navigation.navigate('Onboarding')}>
+            <TouchableNativeFeedback onPress={() => this.props.navigation.navigate('Flower')}>
                 <View style={{
                     flex: 1,
                     alignItems: 'flex-start',

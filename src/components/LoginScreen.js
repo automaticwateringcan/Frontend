@@ -51,6 +51,7 @@ const styles = StyleSheet.create({
         color: 'rgba(184, 182, 182, 1)',
         paddingBottom: 0,
         paddingTop: 0,
+        width: 290
 
 
     },
