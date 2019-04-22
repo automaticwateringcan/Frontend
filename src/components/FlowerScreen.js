@@ -141,7 +141,7 @@ class FirstScreen extends React.Component {
                         shadowRadius: 7.49,
                         elevation: 12
                     }}
-                    onPress={() => this.props.navigation.navigate('Main')}
+                    onPress={() => this.props.navigation.navigate('FlowerSettings')}
                 >
                     <Text style={{fontFamily: 'Poppins-Regular', color: 'rgba(154, 157, 159, 1)'}}>SELECT MANUAL SETTINGS</Text>
                 </TouchableOpacity>
