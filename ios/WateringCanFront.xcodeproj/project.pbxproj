@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -40,6 +39,28 @@
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
+		0ACE1D10EEA1453395327405 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 522EC1EE835F47FEA47BB8A8 /* libRNGestureHandler.a */; };
+		A3791299131F493FA9E25ABE /* libRNGestureHandler-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 092CBAE117094485B3B6BC1D /* libRNGestureHandler-tvOS.a */; };
+		B79B9F5190C24946B31FF74A /* libRNShare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA4E9C45381749E38AA71B3B /* libRNShare.a */; };
+		BD6D00A351CA4F0C8C76C6BC /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EF2FB3D111E4CC58A6F70C2 /* Poppins-Black.ttf */; };
+		D861CF89FB0B47DE94A83DF7 /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B1BD2BFD2564A7BACF0D8CB /* Poppins-BlackItalic.ttf */; };
+		1587D5DEBAA04418BB3E4BEB /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02C6D51A92E34C1EBB9D9680 /* Poppins-Bold.ttf */; };
+		8230608DDF8A466CBC8E9BBA /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67A5CA6E361C4D31B653F6A4 /* Poppins-BoldItalic.ttf */; };
+		276FAD28026B4E7FA9605D2E /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C288526BB694B07B87D3A26 /* Poppins-ExtraBold.ttf */; };
+		03CA9424A9E64B91AC12771D /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5367B266DAF49088ED3408A /* Poppins-ExtraBoldItalic.ttf */; };
+		817ECC3A610841A3ABABAD50 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD2C286B8FF444D8AB254539 /* Poppins-ExtraLight.ttf */; };
+		5D4702C0136C417ABC074A98 /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59D36BCFBFCE4F72B5B0A0F9 /* Poppins-ExtraLightItalic.ttf */; };
+		B70880E501404A2DB8CD8339 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9B97F130D454C3EB29C6432 /* Poppins-Italic.ttf */; };
+		AE5384BA302E497681EF44F7 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C35CAE4FC9F84E04B01E3DEA /* Poppins-Light.ttf */; };
+		7BB274C80F484FBC824EE73E /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41D19D82545F4D3CA0246EB6 /* Poppins-LightItalic.ttf */; };
+		E44117483183423BBC05CDC8 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A1EA040E02E485ABCA66634 /* Poppins-Medium.ttf */; };
+		7421D6598A444FE0A7BB2470 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D13F78B5F53B471D8CE65814 /* Poppins-MediumItalic.ttf */; };
+		0DDD1C1D056B49FA8E5A8C0D /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9199AEA0AF4043A895637E86 /* Poppins-Regular.ttf */; };
+		A76BD89F3B6F44D7BE095B7D /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C354B5E46B134688AA392AB1 /* Poppins-SemiBold.ttf */; };
+		B6A3C35347D4488FB423CDB4 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08406F72A5004297BCAC5D36 /* Poppins-SemiBoldItalic.ttf */; };
+		8D1A5C352FE241ACB8F62A55 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5173B3DD6C2B4F95B9280AE9 /* Poppins-Thin.ttf */; };
+		D35CE4AEA411475EBA390959 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D0D73148DB540E7A0852504 /* Poppins-ThinItalic.ttf */; };
+		465D4524695F4C19A5B9D1F8 /* libRNTHorizontalPicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E23A40FC217455BB661FF96 /* libRNTHorizontalPicker.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -347,6 +368,31 @@
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		C5F5997F416643A4B7A7E431 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; name = "RNGestureHandler.xcodeproj"; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		522EC1EE835F47FEA47BB8A8 /* libRNGestureHandler.a */ = {isa = PBXFileReference; name = "libRNGestureHandler.a"; path = "libRNGestureHandler.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		092CBAE117094485B3B6BC1D /* libRNGestureHandler-tvOS.a */ = {isa = PBXFileReference; name = "libRNGestureHandler-tvOS.a"; path = "libRNGestureHandler-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		4EBDAC2A5EBF42198CE16F9D /* RNShare.xcodeproj */ = {isa = PBXFileReference; name = "RNShare.xcodeproj"; path = "../node_modules/react-native-share/ios/RNShare.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		CA4E9C45381749E38AA71B3B /* libRNShare.a */ = {isa = PBXFileReference; name = "libRNShare.a"; path = "libRNShare.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		7EF2FB3D111E4CC58A6F70C2 /* Poppins-Black.ttf */ = {isa = PBXFileReference; name = "Poppins-Black.ttf"; path = "../assets/fonts/Poppins-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3B1BD2BFD2564A7BACF0D8CB /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-BlackItalic.ttf"; path = "../assets/fonts/Poppins-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		02C6D51A92E34C1EBB9D9680 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; name = "Poppins-Bold.ttf"; path = "../assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		67A5CA6E361C4D31B653F6A4 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-BoldItalic.ttf"; path = "../assets/fonts/Poppins-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1C288526BB694B07B87D3A26 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; name = "Poppins-ExtraBold.ttf"; path = "../assets/fonts/Poppins-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A5367B266DAF49088ED3408A /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-ExtraBoldItalic.ttf"; path = "../assets/fonts/Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AD2C286B8FF444D8AB254539 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; name = "Poppins-ExtraLight.ttf"; path = "../assets/fonts/Poppins-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		59D36BCFBFCE4F72B5B0A0F9 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-ExtraLightItalic.ttf"; path = "../assets/fonts/Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F9B97F130D454C3EB29C6432 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; name = "Poppins-Italic.ttf"; path = "../assets/fonts/Poppins-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C35CAE4FC9F84E04B01E3DEA /* Poppins-Light.ttf */ = {isa = PBXFileReference; name = "Poppins-Light.ttf"; path = "../assets/fonts/Poppins-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		41D19D82545F4D3CA0246EB6 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-LightItalic.ttf"; path = "../assets/fonts/Poppins-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7A1EA040E02E485ABCA66634 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; name = "Poppins-Medium.ttf"; path = "../assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D13F78B5F53B471D8CE65814 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-MediumItalic.ttf"; path = "../assets/fonts/Poppins-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9199AEA0AF4043A895637E86 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; name = "Poppins-Regular.ttf"; path = "../assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C354B5E46B134688AA392AB1 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; name = "Poppins-SemiBold.ttf"; path = "../assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		08406F72A5004297BCAC5D36 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-SemiBoldItalic.ttf"; path = "../assets/fonts/Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5173B3DD6C2B4F95B9280AE9 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; name = "Poppins-Thin.ttf"; path = "../assets/fonts/Poppins-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2D0D73148DB540E7A0852504 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-ThinItalic.ttf"; path = "../assets/fonts/Poppins-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		572B9F25F3E548BFA316F6C3 /* RNTHorizontalPicker.xcodeproj */ = {isa = PBXFileReference; name = "RNTHorizontalPicker.xcodeproj"; path = "../node_modules/react-native-horizontal-picker/RNTHorizontalPicker.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		8E23A40FC217455BB661FF96 /* libRNTHorizontalPicker.a */ = {isa = PBXFileReference; name = "libRNTHorizontalPicker.a"; path = "libRNTHorizontalPicker.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,6 +421,9 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				0ACE1D10EEA1453395327405 /* libRNGestureHandler.a in Frameworks */,
+				B79B9F5190C24946B31FF74A /* libRNShare.a in Frameworks */,
+				465D4524695F4C19A5B9D1F8 /* libRNTHorizontalPicker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +440,7 @@
 				2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */,
 				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
+				A3791299131F493FA9E25ABE /* libRNGestureHandler-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +614,9 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
+				C5F5997F416643A4B7A7E431 /* RNGestureHandler.xcodeproj */,
+				4EBDAC2A5EBF42198CE16F9D /* RNShare.xcodeproj */,
+				572B9F25F3E548BFA316F6C3 /* RNTHorizontalPicker.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -585,6 +638,7 @@
 				00E356EF1AD99517003FC87E /* WateringCanFrontTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				39073CC5F1024E0494CF201A /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -610,6 +664,32 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		39073CC5F1024E0494CF201A /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				7EF2FB3D111E4CC58A6F70C2 /* Poppins-Black.ttf */,
+				3B1BD2BFD2564A7BACF0D8CB /* Poppins-BlackItalic.ttf */,
+				02C6D51A92E34C1EBB9D9680 /* Poppins-Bold.ttf */,
+				67A5CA6E361C4D31B653F6A4 /* Poppins-BoldItalic.ttf */,
+				1C288526BB694B07B87D3A26 /* Poppins-ExtraBold.ttf */,
+				A5367B266DAF49088ED3408A /* Poppins-ExtraBoldItalic.ttf */,
+				AD2C286B8FF444D8AB254539 /* Poppins-ExtraLight.ttf */,
+				59D36BCFBFCE4F72B5B0A0F9 /* Poppins-ExtraLightItalic.ttf */,
+				F9B97F130D454C3EB29C6432 /* Poppins-Italic.ttf */,
+				C35CAE4FC9F84E04B01E3DEA /* Poppins-Light.ttf */,
+				41D19D82545F4D3CA0246EB6 /* Poppins-LightItalic.ttf */,
+				7A1EA040E02E485ABCA66634 /* Poppins-Medium.ttf */,
+				D13F78B5F53B471D8CE65814 /* Poppins-MediumItalic.ttf */,
+				9199AEA0AF4043A895637E86 /* Poppins-Regular.ttf */,
+				C354B5E46B134688AA392AB1 /* Poppins-SemiBold.ttf */,
+				08406F72A5004297BCAC5D36 /* Poppins-SemiBoldItalic.ttf */,
+				5173B3DD6C2B4F95B9280AE9 /* Poppins-Thin.ttf */,
+				2D0D73148DB540E7A0852504 /* Poppins-ThinItalic.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -692,7 +772,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -1057,6 +1137,24 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				BD6D00A351CA4F0C8C76C6BC /* Poppins-Black.ttf in Resources */,
+				D861CF89FB0B47DE94A83DF7 /* Poppins-BlackItalic.ttf in Resources */,
+				1587D5DEBAA04418BB3E4BEB /* Poppins-Bold.ttf in Resources */,
+				8230608DDF8A466CBC8E9BBA /* Poppins-BoldItalic.ttf in Resources */,
+				276FAD28026B4E7FA9605D2E /* Poppins-ExtraBold.ttf in Resources */,
+				03CA9424A9E64B91AC12771D /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				817ECC3A610841A3ABABAD50 /* Poppins-ExtraLight.ttf in Resources */,
+				5D4702C0136C417ABC074A98 /* Poppins-ExtraLightItalic.ttf in Resources */,
+				B70880E501404A2DB8CD8339 /* Poppins-Italic.ttf in Resources */,
+				AE5384BA302E497681EF44F7 /* Poppins-Light.ttf in Resources */,
+				7BB274C80F484FBC824EE73E /* Poppins-LightItalic.ttf in Resources */,
+				E44117483183423BBC05CDC8 /* Poppins-Medium.ttf in Resources */,
+				7421D6598A444FE0A7BB2470 /* Poppins-MediumItalic.ttf in Resources */,
+				0DDD1C1D056B49FA8E5A8C0D /* Poppins-Regular.ttf in Resources */,
+				A76BD89F3B6F44D7BE095B7D /* Poppins-SemiBold.ttf in Resources */,
+				B6A3C35347D4488FB423CDB4 /* Poppins-SemiBoldItalic.ttf in Resources */,
+				8D1A5C352FE241ACB8F62A55 /* Poppins-Thin.ttf in Resources */,
+				D35CE4AEA411475EBA390959 /* Poppins-ThinItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1189,6 +1287,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WateringCanFront.app/WateringCanFront";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-share/ios",
+					"$(SRCROOT)/../node_modules/react-native-horizontal-picker/RNTHorizontalPicker",
+				);
 			};
 			name = Debug;
 		};
@@ -1207,6 +1318,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WateringCanFront.app/WateringCanFront";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-share/ios",
+					"$(SRCROOT)/../node_modules/react-native-horizontal-picker/RNTHorizontalPicker",
+				);
 			};
 			name = Release;
 		};
@@ -1226,6 +1350,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = WateringCanFront;
 				VERSIONING_SYSTEM = "apple-generic";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-share/ios",
+					"$(SRCROOT)/../node_modules/react-native-horizontal-picker/RNTHorizontalPicker",
+				);
 			};
 			name = Debug;
 		};
@@ -1244,6 +1374,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = WateringCanFront;
 				VERSIONING_SYSTEM = "apple-generic";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-share/ios",
+					"$(SRCROOT)/../node_modules/react-native-horizontal-picker/RNTHorizontalPicker",
+				);
 			};
 			name = Release;
 		};
@@ -1270,6 +1406,19 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-share/ios",
+					"$(SRCROOT)/../node_modules/react-native-horizontal-picker/RNTHorizontalPicker",
+				);
 			};
 			name = Debug;
 		};
@@ -1296,6 +1445,19 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-share/ios",
+					"$(SRCROOT)/../node_modules/react-native-horizontal-picker/RNTHorizontalPicker",
+				);
 			};
 			name = Release;
 		};
@@ -1321,6 +1483,19 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WateringCanFront-tvOS.app/WateringCanFront-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-share/ios",
+					"$(SRCROOT)/../node_modules/react-native-horizontal-picker/RNTHorizontalPicker",
+				);
 			};
 			name = Debug;
 		};
@@ -1346,6 +1521,19 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WateringCanFront-tvOS.app/WateringCanFront-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-share/ios",
+					"$(SRCROOT)/../node_modules/react-native-horizontal-picker/RNTHorizontalPicker",
+				);
 			};
 			name = Release;
 		};
