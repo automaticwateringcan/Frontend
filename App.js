@@ -22,7 +22,7 @@ const RootStack = createStackNavigator(
       Flower: FlowerScreen,
   },
   {
-    initialRouteName: 'FirstScreen',
+    initialRouteName: 'AddPlant',
   }
 );
 
