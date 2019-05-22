@@ -42,7 +42,7 @@ class MainScreen extends React.Component {
         //Have a try and catch block for catching errors.
         try {
             //Assign the promise unresolved first then get the data using the json method.
-            const apiCall = await fetch('http://192.168.55.8:8080/api/plants');
+            const apiCall = await fetch('http://172.16.23.112:8080/api/plants');
 
             const plant = await apiCall.json();
 
@@ -64,10 +64,7 @@ class MainScreen extends React.Component {
                         data={plantList}
                         renderItem={(item) => <FlowerItem key={item.id} navigation={this.props.navigation} plantData={item}/>}
                         keyExtractor={(item) => item.id}
-
                     />
-
-
                 </View>
             );
         } else {

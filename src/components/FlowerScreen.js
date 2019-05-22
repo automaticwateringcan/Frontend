@@ -1,6 +1,13 @@
 import React from 'react';
 import {Image, ScrollView, Text, TouchableNativeFeedback, View, StyleSheet, TouchableOpacity} from "react-native";
-
+import {
+  LineChart,
+  BarChart,
+  PieChart,
+  ProgressChart,
+  ContributionGraph,
+  StackedBarChart
+} from 'react-native-chart-kit'
 const styles = StyleSheet.create({
     image: {
         width: 100, height: 150, resizeMode: 'contain',
@@ -12,8 +19,16 @@ const styles = StyleSheet.create({
         fontFamily: 'Poppins-ExtraLight',
         fontSize: 20,
         color: 'rgba(83,113,75,1)'
-    }
+    },
+    chartText: {
+            fontFamily: 'Poppins-ExtraLight',
+            fontSize: 20,
+            color: 'rgba(25,76,25,1)'
+        }
 });
+
+
+
 
 class FirstScreen extends React.Component {
     static navigationOptions = ({navigation}) => ({
@@ -35,6 +50,17 @@ class FirstScreen extends React.Component {
             </TouchableOpacity>
         )
     });
+
+        state = {
+            //Assing a array to your pokeList state
+            moisureList: [],
+            temeratureLIst: [],
+            soilList: [],
+            numberOfMeasures: 5,
+            //Have a loading state where when data retrieve returns data.
+            loading: false,
+            weekDays: ['MON','TUE','WED','THU','FRI','SAT','SUN']
+        }
 
 
     render() {
@@ -96,34 +122,132 @@ class FirstScreen extends React.Component {
             </View>
 
             <View style={{alignItems: 'center'}}>
-                <Text>WYKRES 1</Text>
-                <Text>WYKRES 1</Text>
-                <Text>WYKRES 1</Text>
-                <Text>WYKRES 1</Text>
-                <Text>WYKRES 1</Text>
-                <Text>WYKRES 1</Text>
-                <Text>WYKRES 1</Text>
-                <Text>WYKRES 1</Text>
-                <Text>WYKRES 1</Text>
-                <Text>WYKRES 1</Text>
-                <Text>WYKRES 1</Text>
+
+                <View>
+                  <Text style={{fontFamily: 'Poppins-SemiBold', color: 'rgba(25,76,25,1)'}}>
+                    Temperature in last {this.state.numberOfMeasures} days:
+                  </Text>
+                  <LineChart
+                    data={{
+                      labels: [this.state.weekDays[(new Date().getDay()+6-5)%7],this.state.weekDays[(new Date().getDay()+6-4)%7], this.state.weekDays[(new Date().getDay()+6-3)%7], this.state.weekDays[(new Date().getDay()+6-2)%7], this.state.weekDays[(new Date().getDay()+6-1)%7], 'TODAY'],
+                      datasets: [{
+                        data: [
+                          Math.random() * (40 - 10) + 10,
+                          Math.random() * (40 - 10) + 10,
+                          Math.random() * (40 - 10) + 10,
+                          Math.random() * (40 - 10) + 10,
+                          Math.random() * (40 - 10) + 10,
+                          Math.random() * (40 - 10) + 10,
+                        ]
+                      }]
+                    }}
+                    width={350} // from react-native
+                    height={220}
+                    yAxisLabel={'°C '}
+                    chartConfig={{
+                      backgroundColor: '#e26a00',
+                      backgroundGradientFrom: '#398949',
+                      backgroundGradientTo: '#59b76d',
+                      decimalPlaces: 2, // optional, defaults to 2dp
+                      color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+                      style: {
+                        borderRadius: 16
+                      }
+                    }}
+                    bezier
+                    style={{
+                      marginVertical: 8,
+                      borderRadius: 16
+                    }}
+                  />
+             </View>
             </View>
-
-
             <View style={{alignItems: 'center'}}>
-                <Text>WYKRES 2</Text>
-                <Text>WYKRES 2</Text>
-                <Text>WYKRES 2</Text>
-                <Text>WYKRES 2</Text>
-                <Text>WYKRES 2</Text>
-                <Text>WYKRES 2</Text>
-                <Text>WYKRES 2</Text>
-                <Text>WYKRES 2</Text>
-                <Text>WYKRES 2</Text>
-                <Text>WYKRES 2</Text>
-                <Text>WYKRES 2</Text>
-                <Text>WYKRES 2</Text>
-            </View>
+
+               <View>
+                 <Text style={{fontFamily: 'Poppins-SemiBold', color: 'rgba(25,76,25,1)'}}>
+                   Humidity in last {this.state.numberOfMeasures} days:
+                 </Text>
+                 <LineChart
+                   data={{
+                      labels: [this.state.weekDays[(new Date().getDay()+6-5)%7],this.state.weekDays[(new Date().getDay()+6-4)%7], this.state.weekDays[(new Date().getDay()+6-3)%7], this.state.weekDays[(new Date().getDay()+6-2)%7], this.state.weekDays[(new Date().getDay()+6-1)%7], 'TODAY'],
+                     datasets: [{
+                       data: [
+                         Math.random() * 100,
+                         Math.random() * 100,
+                         Math.random() * 100,
+                         Math.random() * 100,
+                         Math.random() * 100,
+                         Math.random() * 100
+                       ]
+                     }]
+                   }}
+                   width={350} // from react-native
+                   height={220}
+                   yAxisLabel={'% '}
+                   chartConfig={{
+                     backgroundColor: '#3675db',
+                     backgroundGradientFrom: '#4e86e0',
+                     backgroundGradientTo: '#5c8ee0',
+                     decimalPlaces: 2, // optional, defaults to 2dp
+                     color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+                     style: {
+                       borderRadius: 16
+                     }
+                   }}
+                   bezier
+                   style={{
+                     marginVertical: 8,
+                     borderRadius: 16
+                   }}
+                 />
+               </View>
+
+           </View>
+           <View style={{alignItems: 'center'}}>
+
+              <View>
+                <Text style={{fontFamily: 'Poppins-SemiBold', color: 'rgba(25,76,25,1)'}}>
+                  Soil Moisture in last {this.state.numberOfMeasures} days:
+                </Text>
+                <LineChart
+                  data={{
+                      labels: [this.state.weekDays[(new Date().getDay()+6-5)%7],this.state.weekDays[(new Date().getDay()+6-4)%7], this.state.weekDays[(new Date().getDay()+6-3)%7], this.state.weekDays[(new Date().getDay()+6-2)%7], this.state.weekDays[(new Date().getDay()+6-1)%7], 'TODAY'],
+                    datasets: [{
+                      data: [
+                        Math.random() * 100,
+                        Math.random() * 100,
+                        Math.random() * 100,
+                        Math.random() * 100,
+                        Math.random() * 100,
+                        Math.random() * 100
+                      ]
+                    }]
+                  }}
+                  width={350} // from react-native
+                  height={220}
+                  yAxisLabel={'% '}
+                  chartConfig={{
+                    backgroundColor: '#e26a00',
+                    backgroundGradientFrom: '#fb8c00',
+                    backgroundGradientTo: '#ffa726',
+                    decimalPlaces: 2, // optional, defaults to 2dp
+                    color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+                    style: {
+                      borderRadius: 16
+                    }
+                  }}
+                  bezier
+                  style={{
+                    marginVertical: 8,
+                    borderRadius: 16
+                  }}
+                />
+              </View>
+
+          </View>
+
+
 
             <View style={{alignItems: 'center'}}>
                 <TouchableOpacity
@@ -160,15 +284,33 @@ class FirstScreen extends React.Component {
         try {
             //Assign the promise unresolved first then get the data using the json method.
             //localhost:8080/api/plants/water/{id}?portions=
-            const apiCall = await fetch('http://192.168.55.8:8080/api/plants/water/' + id + '?portions=10');
+            const apiCall = await fetch('http://172.16.23.112:8080/api/plants/water/' + id + '?portions=10');
 
             const response = await apiCall.json();
-            console.warn(response)
+            //console.warn(response)
 
         } catch(err) {
             console.warn("Error fetching data-----------", err);
         }
     }
+
+//
+//    async getChartsData(id) {
+//        //Have a try and catch block for catching errors.
+//        try {
+//            //Assign the promise unresolved first then get the data using the json method.
+//            const apiCall = await fetch('http://172.16.23.112:8080/api/plants/measure/'+id+'?amount=2');
+//
+//            const data = await apiCall.json();
+//
+//            this.setState({plantList: plant, loading: false});
+//
+//        } catch(err) {
+//            console.warn("Error fetching data-----------", err);
+//        }
+//    }
+
+
 }
 
 export default FirstScreen;
