@@ -42,7 +42,7 @@ class MainScreen extends React.Component {
         //Have a try and catch block for catching errors.
         try {
             //Assign the promise unresolved first then get the data using the json method.
-            const apiCall = await fetch('http://172.16.23.112:8080/api/plants');
+            const apiCall = await fetch('http://192.168.43.207:8080/api/plants');
 
             const plant = await apiCall.json();
 

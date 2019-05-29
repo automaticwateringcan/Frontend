@@ -31,6 +31,13 @@ const styles = StyleSheet.create({
 
 
 class FirstScreen extends React.Component {
+
+     constructor(props) {
+        super(props);
+        this.getChartsData(props.navigation.state.params.plantId,5);
+     }
+
+
     static navigationOptions = ({navigation}) => ({
         title: navigation.getParam('plantData').item.name,
         headerTitleStyle: {fontFamily: 'Poppins-Bold', fontSize: 20, color: 'rgba(255, 255, 255, 1)'},
@@ -52,13 +59,12 @@ class FirstScreen extends React.Component {
     });
 
         state = {
-            //Assing a array to your pokeList state
-            moisureList: [],
-            temeratureLIst: [],
-            soilList: [],
+            moisureList: [0,0,0,0,0],
+            temeratureList: [0,0,0,0,0],
+            soilList: [0,0,0,0,0],
             numberOfMeasures: 5,
             //Have a loading state where when data retrieve returns data.
-            loading: false,
+            loading: true,
             weekDays: ['MON','TUE','WED','THU','FRI','SAT','SUN']
         }
 
@@ -120,9 +126,7 @@ class FirstScreen extends React.Component {
                 <Text style={{fontFamily: 'Poppins-Regular', color: 'rgba(59, 89, 152, 1)'}}>WATER FLOWER</Text>
             </TouchableOpacity>
             </View>
-
             <View style={{alignItems: 'center'}}>
-
                 <View>
                   <Text style={{fontFamily: 'Poppins-SemiBold', color: 'rgba(25,76,25,1)'}}>
                     Temperature in last {this.state.numberOfMeasures} days:
@@ -131,14 +135,7 @@ class FirstScreen extends React.Component {
                     data={{
                       labels: [this.state.weekDays[(new Date().getDay()+6-5)%7],this.state.weekDays[(new Date().getDay()+6-4)%7], this.state.weekDays[(new Date().getDay()+6-3)%7], this.state.weekDays[(new Date().getDay()+6-2)%7], this.state.weekDays[(new Date().getDay()+6-1)%7], 'TODAY'],
                       datasets: [{
-                        data: [
-                          Math.random() * (40 - 10) + 10,
-                          Math.random() * (40 - 10) + 10,
-                          Math.random() * (40 - 10) + 10,
-                          Math.random() * (40 - 10) + 10,
-                          Math.random() * (40 - 10) + 10,
-                          Math.random() * (40 - 10) + 10,
-                        ]
+                        data: this.state.temeratureList
                       }]
                     }}
                     width={350} // from react-native
@@ -172,14 +169,7 @@ class FirstScreen extends React.Component {
                    data={{
                       labels: [this.state.weekDays[(new Date().getDay()+6-5)%7],this.state.weekDays[(new Date().getDay()+6-4)%7], this.state.weekDays[(new Date().getDay()+6-3)%7], this.state.weekDays[(new Date().getDay()+6-2)%7], this.state.weekDays[(new Date().getDay()+6-1)%7], 'TODAY'],
                      datasets: [{
-                       data: [
-                         Math.random() * 100,
-                         Math.random() * 100,
-                         Math.random() * 100,
-                         Math.random() * 100,
-                         Math.random() * 100,
-                         Math.random() * 100
-                       ]
+                       data: this.state.moisureList
                      }]
                    }}
                    width={350} // from react-native
@@ -214,14 +204,7 @@ class FirstScreen extends React.Component {
                   data={{
                       labels: [this.state.weekDays[(new Date().getDay()+6-5)%7],this.state.weekDays[(new Date().getDay()+6-4)%7], this.state.weekDays[(new Date().getDay()+6-3)%7], this.state.weekDays[(new Date().getDay()+6-2)%7], this.state.weekDays[(new Date().getDay()+6-1)%7], 'TODAY'],
                     datasets: [{
-                      data: [
-                        Math.random() * 100,
-                        Math.random() * 100,
-                        Math.random() * 100,
-                        Math.random() * 100,
-                        Math.random() * 100,
-                        Math.random() * 100
-                      ]
+                      data: this.state.soilList
                     }]
                   }}
                   width={350} // from react-native
@@ -284,7 +267,7 @@ class FirstScreen extends React.Component {
         try {
             //Assign the promise unresolved first then get the data using the json method.
             //localhost:8080/api/plants/water/{id}?portions=
-            const apiCall = await fetch('http://172.16.23.112:8080/api/plants/water/' + id + '?portions=10');
+            const apiCall = await fetch('http://192.168.43.207:8080/api/plants/water/' + id + '?portions=10');
 
             const response = await apiCall.json();
             //console.warn(response)
@@ -294,22 +277,23 @@ class FirstScreen extends React.Component {
         }
     }
 
-//
-//    async getChartsData(id) {
-//        //Have a try and catch block for catching errors.
-//        try {
-//            //Assign the promise unresolved first then get the data using the json method.
-//            const apiCall = await fetch('http://172.16.23.112:8080/api/plants/measure/'+id+'?amount=2');
-//
-//            const data = await apiCall.json();
-//
-//            this.setState({plantList: plant, loading: false});
-//
-//        } catch(err) {
-//            console.warn("Error fetching data-----------", err);
-//        }
-//    }
+    async getChartsData(id, amount) {
+        try {
+            const apiCallH = await fetch('http://192.168.43.207:8080/api/plants/humidity/'+id+'?amount='+amount);
+            const apiCallT = await fetch('http://192.168.43.207:8080/api/plants/temperature/'+id+'?amount='+amount);
+            const apiCallS = await fetch('http://192.168.43.207:8080/api/plants/soil/'+id+'?amount='+amount);
 
+            const dataH = await apiCallH.json();
+            const dataT = await apiCallT.json();
+            const dataS = await apiCallS.json();
+
+            this.setState({moisureList: dataH,temeratureList: dataT, soilList: dataS});
+
+        } catch(err) {
+            console.warn("Error fetching data-----------", err);
+        }
+
+    }
 
 }
 
