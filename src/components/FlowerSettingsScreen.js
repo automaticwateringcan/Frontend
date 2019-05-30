@@ -51,16 +51,11 @@ class FlowerSettingsScreen extends React.Component {
 
     state = {switchNotifications:true, switchAutoWatering:false, wateringInterval:4.0, wateringAmount:60}
     toggleNotificationSwitch = (value) => {
-        //onValueChange of the switch this function will be called
         this.setState({switchNotifications: value})
-        //state changes according to switch
-        //which will result in re-render the text
+
     }
     toggleAutoWateringSwitch = (value) => {
-        //onValueChange of the switch this function will be called
         this.setState({switchAutoWatering: value})
-        //state changes according to switch
-        //which will result in re-render the text
     }
 
 
@@ -222,6 +217,16 @@ class FlowerSettingsScreen extends React.Component {
 
         );
     }
+
+    async sendSetings(id) {
+            try {
+                const apiCall = await fetch('http://localhost:8080/api/plants/settings/' + id + '?switchNotifications:'+this.state.switchNotifications+'&switchAutoWatering:'+this.state.switchAutoWatering+'&wateringInterval:'+this.state.wateringInterval+'&wateringAmount:'+this.state.wateringAmount);
+                const response = await apiCall.json();
+
+            } catch(err) {
+                console.warn("Error fetching data-----------", err);
+            }
+        }
 }
 
 export default FlowerSettingsScreen;

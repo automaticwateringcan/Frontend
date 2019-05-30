@@ -265,12 +265,10 @@ class FirstScreen extends React.Component {
 
     async handleWatering(id) {
         try {
-            //Assign the promise unresolved first then get the data using the json method.
-            //localhost:8080/api/plants/water/{id}?portions=
-            const apiCall = await fetch('http://192.168.43.207:8080/api/plants/water/' + id + '?portions=10');
+
+            const apiCall = await fetch('http://localhost:8080/api/plants/water/' + id + '?portions=10');
 
             const response = await apiCall.json();
-            //console.warn(response)
 
         } catch(err) {
             console.warn("Error fetching data-----------", err);
@@ -279,9 +277,9 @@ class FirstScreen extends React.Component {
 
     async getChartsData(id, amount) {
         try {
-            const apiCallH = await fetch('http://192.168.43.207:8080/api/plants/humidity/'+id+'?amount='+amount);
-            const apiCallT = await fetch('http://192.168.43.207:8080/api/plants/temperature/'+id+'?amount='+amount);
-            const apiCallS = await fetch('http://192.168.43.207:8080/api/plants/soil/'+id+'?amount='+amount);
+            const apiCallH = await fetch('http://localhost:8080/api/plants/humidity/'+id+'?amount='+amount);
+            const apiCallT = await fetch('http://localhost:8080/api/plants/temperature/'+id+'?amount='+amount);
+            const apiCallS = await fetch('http://localhost:8080/api/plants/soil/'+id+'?amount='+amount);
 
             const dataH = await apiCallH.json();
             const dataT = await apiCallT.json();

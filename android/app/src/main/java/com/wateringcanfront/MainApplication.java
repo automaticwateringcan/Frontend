@@ -3,6 +3,7 @@ package com.wateringcanfront;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import io.invertase.firebase.RNFirebasePackage;
 import com.horcrux.svg.SvgPackage;
 import cl.json.RNSharePackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
@@ -26,6 +27,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNFirebasePackage(),
             new SvgPackage(),
             new RNSharePackage(),
             new RNGestureHandlerPackage()

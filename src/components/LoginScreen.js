@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
 class LoginScreen extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { email: 'Your email', password: '123456'};
+        this.state = { email: 'Adam', password: '123456'};
     }
 
     render() {
@@ -92,7 +92,7 @@ class LoginScreen extends React.Component {
                 <View style={{width: '80%'}}>
 
                     <View style={{alignSelf: 'flex-start'}}>
-                        <Text style={styles.textLogin}>EMAIL</Text>
+                        <Text style={styles.textLogin}>LOGIN</Text>
                         <TextInput
                             style={styles.inputLogin}
                             onChangeText={(email) => this.setState({email})}
